@@ -2,6 +2,9 @@ os: test
 
 configuration: Release
 
+init:
+- appveyor version
+
 build:
   project: AppVeyorTest.sln
   verbosity: detailed

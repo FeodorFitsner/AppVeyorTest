@@ -2,9 +2,6 @@ os: test
 
 configuration: Release
 
-init:
-- ps: Restart-Computer
-
 build:
   project: AppVeyorTest.sln
   verbosity: detailed

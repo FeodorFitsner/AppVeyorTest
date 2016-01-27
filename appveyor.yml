@@ -4,6 +4,7 @@ configuration: Release
 
 init:
 - appveyor version
+- ps: Update-AppveyorBuild -Version "1.0 (Build 34)"
 
 install:
 - appveyor PushArtifact AppVeyorTest\AppVeyorTest.csproj

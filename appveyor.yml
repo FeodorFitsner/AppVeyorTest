@@ -7,6 +7,7 @@ init:
 
 install:
 - appveyor PushArtifact AppVeyorTest\AppVeyorTest.csproj
+- appveyor UpdateBuild -version "1.0 (Build 34)"
 
 build:
   project: AppVeyorTest.sln
@@ -18,5 +19,5 @@ after_build:
 artifacts:
 - path: BuildScript
 
-on_failure:
-- ps: Get-EventLog AppVeyor -newest 10 | Format-List
+on_finish:
+- ps: Get-EventLog AppVeyor -newest 100 | Format-List

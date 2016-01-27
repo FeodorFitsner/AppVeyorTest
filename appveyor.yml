@@ -12,6 +12,9 @@ install:
 build:
   project: AppVeyorTest.sln
   verbosity: detailed
+
+after_build:
+- appveyor PushArtifact BuildScript\BuildScript.csproj
   
 cache:
 - packages -> **\packages.config

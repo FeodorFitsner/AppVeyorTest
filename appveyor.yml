@@ -5,8 +5,8 @@ configuration: Release
 init:
 - appveyor version
 
-#install:
-#- appveyor PushArtifact AppVeyorTest\AppVeyorTest.csproj
+install:
+- appveyor PushArtifact AppVeyorTest\AppVeyorTest.csproj
 
 build:
   project: AppVeyorTest.sln

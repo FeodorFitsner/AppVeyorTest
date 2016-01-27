@@ -4,7 +4,7 @@ configuration: Release
 
 init:
 - appveyor version
-- ps: Update-AppveyorBuild -Version "1.0 (Build 34)"
+#- ps: Update-AppveyorBuild -Version "1.0 (Build 34)"
 
 install:
 - appveyor PushArtifact AppVeyorTest\AppVeyorTest.csproj
@@ -20,4 +20,4 @@ artifacts:
 - path: BuildScript
 
 on_finish:
-- ps: Get-EventLog AppVeyor -newest 100 | Format-List
+- ps: Get-EventLog AppVeyor -newest 10 | Format-List

@@ -5,6 +5,10 @@ configuration: Release
 init:
 - appveyor version
 
+install:
+- appveyor-retry nuget install awssdk
+- appveyor-retry nuget restore d
+
 build:
   project: AppVeyorTest.sln
   verbosity: detailed
